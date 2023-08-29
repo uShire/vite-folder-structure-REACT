@@ -167,6 +167,9 @@
   .loading-bar::after {
     @apply content-[''] absolute top-0 left-0 w-[180%] h-full bg-gradient-to-r from-transparent via-[#eeeeee] to-transparent animate-loading;
   }
+  .dropdown__link {
+    @apply text-white border-l-2 hover:!border-accent duration-150 hover:!border-l-2 border-transparent pl-2 w-fit inline-block py-1;
+  }
 }
 
 @layer utilities {

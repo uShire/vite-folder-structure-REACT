@@ -36,6 +36,7 @@ const RolesTable = () => {
   const inActiveRoles = roles.filter((item) => {
     return item.status === 0;
   });
+
   React.useEffect(() => {
     function loadData() {
       setIsLoading(true);
@@ -70,7 +71,7 @@ const RolesTable = () => {
                   {item.status === 1 ? (
                     <Pills label="Active" bgc="bg-green-800" />
                   ) : (
-                    <Pills label="Inactive" bgc="bg-gray-500" />
+                    <Pills label="Inactive" bgc="!bg-gray-500" />
                   )}
                 </td>
                 <td className="table__action">

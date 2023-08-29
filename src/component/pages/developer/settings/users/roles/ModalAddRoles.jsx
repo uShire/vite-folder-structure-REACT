@@ -1,20 +1,19 @@
 import React from "react";
 import { FaTimes } from "react-icons/fa";
 import SpinnerButton from "../../../../../partials/spinners/SpinnerButton";
+import Modal from "../../../../../partials/structure/modal";
 
 const ModalAddRoles = ({ setIsShow }) => {
   const handleClose = () => setIsShow(false);
   return (
-    <div className="modal fixed top-0 left-0 w-full z-20">
-      <div className="backdrop bg-white bg-opacity-80 h-screen "></div>{" "}
-      <div className="modal__main absolute mx-1 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white border border-gray-400 rounded-md py-8 px-5 max-w-[420px] w-full ">
-        {" "}
+    <>
+      <Modal>
         <div className="modal__header relative">
-          <h3> Role </h3>{" "}
+          <h3> Role </h3>
           <button className="absolute -top-4 right-0 " onClick={handleClose}>
-            <FaTimes className="text-gray-400 text-base" />{" "}
-          </button>{" "}
-        </div>{" "}
+            <FaTimes className="text-gray-400 text-base" />
+          </button>
+        </div>
         <div className="modal__body min-h-[30vh]">
           <div className="form__wrap">
             <label htmlFor="">Role</label>
@@ -36,8 +35,8 @@ const ModalAddRoles = ({ setIsShow }) => {
             Cancel
           </button>
         </div>
-      </div>{" "}
-    </div>
+      </Modal>
+    </>
   );
 };
 

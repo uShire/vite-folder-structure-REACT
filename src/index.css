@@ -133,6 +133,7 @@
   .nav__link button.active {
     @apply bg-[#436c8a] text-accent;
   }
+
   .breadcrumbs__link {
     @apply text-[12px] opacity-70 hover:underline relative after:content-['/'] after:absolute after:top-0 after:-right-[15px] last:after:hidden last:opacity-100 last:pointer-events-none;
   }
@@ -180,7 +181,7 @@
     scrollbar-gutter: stable;
   }
   .main__grid {
-    @apply grid grid-cols-[0px_1fr] lg:grid-cols-[200px_1fr] min-h-[calc(100vh_-_66px)] lg:min-h-[calc(100vh_-_82px)] gap-0 lg:gap-8 transition-all;
+    @apply grid grid-cols-[0px_1fr] lg:grid-cols-[200px_1fr] min-h-[calc(100vh_-_66px)] lg:min-h-[calc(100vh_-_66px)] gap-0 lg:gap-8 transition-all;
   }
 }
 

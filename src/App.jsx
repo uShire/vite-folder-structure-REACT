@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Roles from "./component/pages/developer/settings/users/roles/Roles";
 import Users from "./component/pages/developer/settings/users/Users";
+import Others from "./component/pages/developer/settings/users/others/Others";
 
 function App() {
   return (
@@ -10,7 +11,7 @@ function App() {
           <Route path="/settings/users" element={<Users />} />
           <Route path="/settings/users/roles" element={<Roles />} />
           <Route path="/settings/users/system" element={<Roles />} />
-          <Route path="/settings/users/other" element={<Roles />} />
+          <Route path="/settings/users/others" element={<Others />} />
         </Routes>
       </Router>
     </>

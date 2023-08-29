@@ -32,7 +32,7 @@ const Users = () => {
                 </div>
               </Link>
               <Link
-                to="#"
+                to="/settings/users/others"
                 className="block border-b border-gray-200 hover:bg-gray-50"
               >
                 <div className="pr-4 py-2 flex items-center justify-between">

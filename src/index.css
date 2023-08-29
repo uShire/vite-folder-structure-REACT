@@ -133,6 +133,9 @@
   .nav__link button.active {
     @apply bg-[#436c8a] text-accent;
   }
+  .nav__link.active button {
+    @apply bg-[#436c8a] text-accent;
+  }
 
   .breadcrumbs__link {
     @apply text-[12px] opacity-70 hover:underline relative after:content-['/'] after:absolute after:top-0 after:-right-[15px] last:after:hidden last:opacity-100 last:pointer-events-none;

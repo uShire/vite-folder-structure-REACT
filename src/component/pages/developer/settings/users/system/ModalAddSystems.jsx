@@ -1,7 +1,7 @@
 import React from "react";
 import { FaTimes } from "react-icons/fa";
-import SpinnerButton from "../../../../../partials/spinners/SpinnerButton";
 import Modal from "../../../../../partials/structure/modal";
+import SpinnerButton from "../../../../../partials/spinners/SpinnerButton";
 
 const ModalAddSystems = ({ setIsShow, itemEdit, setItemEdit }) => {
   const handleClose = () => {
@@ -19,9 +19,7 @@ const ModalAddSystems = ({ setIsShow, itemEdit, setItemEdit }) => {
         </div>
         <div className="modal__body min-h-[30vh]">
           <div className="form__wrap">
-            <label htmlFor="">
-              <Systems></Systems>
-            </label>
+            <label htmlFor="">Systems</label>
             <input type="text" value={itemEdit ? itemEdit.name : ""} />
             <span className="error-show">*required</span>
           </div>

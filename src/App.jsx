@@ -3,6 +3,7 @@ import Roles from "./component/pages/developer/settings/users/roles/Roles";
 import Users from "./component/pages/developer/settings/users/Users";
 import Others from "./component/pages/developer/settings/users/others/Others";
 import SystemLogin from "./component/pages/access/developer/SystemLogin";
+import SystemForgotPassword from "./component/pages/access/developer/SystemForgotPassword";
 
 function App() {
   return (
@@ -10,7 +11,10 @@ function App() {
       <Router>
         <Routes>
           <Route path="/system/login" element={<SystemLogin />} />
-          <Route path="/system/forgot-password" element={<SystemLogin />} />
+          <Route
+            path="/system/forgot-password"
+            element={<SystemForgotPassword />}
+          />
           {/*<Route path="/system/create-password" element={<SystemLogin />} />
           <Route path="/other/login" element={<SystemLogin />} /> */}
 

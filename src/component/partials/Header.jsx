@@ -3,6 +3,7 @@ import Logo from "../svg/Logo";
 import { MdOutlineMailOutline } from "react-icons/md";
 import { MdOutlineAccountCircle } from "react-icons/md";
 import { MdOutlineLogout } from "react-icons/md";
+import BurgerBtn from "./BurgerBtn";
 
 const Header = () => {
   const [show, setShow] = React.useState(false);
@@ -40,7 +41,9 @@ const Header = () => {
             alt=""
             className="rounded-full object-cover object-center"
           />
+          <BurgerBtn />
         </div>
+
         {show && (
           <div
             ref={refMenu}

@@ -15,10 +15,10 @@ const Roles = () => {
         <aside>
           <Navigation menu="settings" submenu="users" />
         </aside>
-        <main className="pr-10">
+        <main className=" pl-5 lg:pr-10">
           <Breadcrumbs />
-          <div className="flex justify-between items-center my-5">
-            <h1>Roles</h1>
+          <div className="flex justify-between items-center gap-10 my-5 lg:w-full">
+            <h1 className="mb-0 lg:mb-5">Roles</h1>
             <button className="btn btn--acent btn--sm" onClick={handleAddRoles}>
               Add
             </button>

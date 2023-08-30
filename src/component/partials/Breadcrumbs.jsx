@@ -2,7 +2,7 @@ import React from "react";
 
 function Breadcrumbs() {
   return (
-    <div className="breadcrumbs">
+    <div className="breadcrumbs py-5 w-fit lg:py-0">
       <ul className="flex items-center gap-6">
         <li className="breadcrumbs__link">
           <a href="#">Home</a>

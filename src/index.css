@@ -143,6 +143,9 @@
   .btn {
     @apply flex justify-center items-center px-5 py-2 bg-primary rounded-full text-white transition-all ease-out hover:bg-accent_darker;
   }
+  .btn:disabled {
+    @apply bg-gray-300 hover:bg-gray-300 cursor-not-allowed;
+  }
   .btn--cancel {
     @apply bg-gray-300 hover:bg-gray-400;
   }
@@ -173,6 +176,9 @@
   }
   .dropdown__link {
     @apply text-white border-l-2 hover:!border-accent duration-150 hover:!border-l-2 border-transparent pl-2 w-fit inline-block py-1;
+  }
+  .toggle__menu span {
+    @apply w-7 h-1 bg-dark block my-1 rounded-full lg:hidden;
   }
 }
 

@@ -1,4 +1,4 @@
-export const others = [
+export const systems = [
   {
     id: 1,
     name: "Kamote",

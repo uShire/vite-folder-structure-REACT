@@ -10,7 +10,7 @@ const ModalValidate = ({ setIsValid }) => {
       <div className="modal__main absolute mx-1 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white border border-gray-400 rounded-md py-8 px-5 max-w-[420px] w-full text-center">
         <div className="modal__header flex justify-center">
           <RiErrorWarningFill className="fill-warning text-6xl mb-2" />
-          <button className="absolute -top-4 right-0 ">
+          <button className="absolute -top-4 right-0 " onClick={handleClose}>
             <FaTimes className="text-gray-400 text-base" />
           </button>
         </div>

@@ -2,7 +2,6 @@ import React from "react";
 import { AiFillEdit } from "react-icons/ai";
 import { BsArchiveFill } from "react-icons/bs";
 import { BsFillTrashFill } from "react-icons/bs";
-import { FaSearch } from "react-icons/fa";
 import { FaTrashRestoreAlt } from "react-icons/fa";
 import { roles } from "./data.js";
 import Pills from "../../../../../partials/Pills.jsx";
@@ -13,7 +12,7 @@ import Footer from "../../../../../partials/Footer.jsx";
 import Nodata from "../../../../../partials/Nodata.jsx";
 import Loadmore from "../../../../../partials/Loadmore.jsx";
 import Searchbar from "../../../../../partials/Searchbar.jsx";
-const RolesTable = () => {
+const RolesTable = ({ setIsShow, setItemEdit }) => {
   const [isLoading, setIsLoading] = React.useState(false);
   const [isArchive, setIsArchive] = React.useState(false);
   const [isDelete, setIsDelete] = React.useState(false);
@@ -33,6 +32,10 @@ const RolesTable = () => {
     setItem(item);
     setIsDelete(true);
     setIsRestore(true);
+  };
+  const handleEdit = (item) => {
+    setItemEdit(item);
+    setIsShow(true);
   };
   const activeRoles = roles.filter((item) => {
     return item.status === 1;
@@ -96,38 +99,42 @@ const RolesTable = () => {
                     <td className="table__action">
                       {item.status === 1 ? (
                         <ul className="flex items-center gap-4">
-                          <li className="tooltip" data-tooltip="Edit">
-                            <button>
+                          <li>
+                            <button
+                              className="tooltip"
+                              data-tooltip="Edit"
+                              onClick={() => handleEdit(item)}
+                            >
                               <AiFillEdit />
                             </button>
                           </li>
-                          <li
-                            className="tooltip"
-                            data-tooltip="Archive"
-                            onClick={() => handleArchive(item)}
-                          >
-                            <button>
+                          <li>
+                            <button
+                              className="tooltip"
+                              data-tooltip="Archive"
+                              onClick={() => handleArchive(item)}
+                            >
                               <BsArchiveFill />
                             </button>
                           </li>
                         </ul>
                       ) : (
                         <ul className="flex items-center gap-4">
-                          <li
-                            className="tooltip"
-                            data-tooltip="Delete"
-                            onClick={() => handleDelete(item)}
-                          >
-                            <button>
+                          <li>
+                            <button
+                              className="tooltip"
+                              data-tooltip="Delete"
+                              onClick={() => handleDelete(item)}
+                            >
                               <BsFillTrashFill />
                             </button>
                           </li>
-                          <li
-                            className="tooltip"
-                            data-tooltip="Restore"
-                            onClick={() => handleRestore(item)}
-                          >
-                            <button>
+                          <li>
+                            <button
+                              className="tooltip"
+                              data-tooltip="Restore"
+                              onClick={() => handleRestore(item)}
+                            >
                               <FaTrashRestoreAlt />
                             </button>
                           </li>

@@ -20,7 +20,7 @@ const Users = () => {
           <div className="mt-5">
             <div className="mt-5 w-full max-w-[650px]">
               <Link
-                to="#"
+                to="/settings/users/systems"
                 className="block border-b border-gray-200 hover:bg-gray-50"
               >
                 <div className="pr-4 py-2 flex items-center justify-between">

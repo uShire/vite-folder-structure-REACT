@@ -2,12 +2,12 @@ import React from "react";
 import Header from "../../../../../partials/Header";
 import Navigation from "../../../../../partials/Navigation";
 import Breadcrumbs from "../../../../../partials/Breadcrumbs";
-import OthersTable from "./OthersTable";
-import ModalAddOthers from "./ModalAddOthers";
+import SystemsTable from "./SystemsTable";
+import ModalAddSystems from "./ModalAddSystems";
 
-const Others = () => {
+const Systems = () => {
   const [isShow, setIsShow] = React.useState(false);
-  const handleAddOthers = () => setIsShow(true);
+  const handleAddSystems = () => setIsShow(true);
   return (
     <>
       <Header />
@@ -18,20 +18,20 @@ const Others = () => {
         <main className="pr-10">
           <Breadcrumbs />
           <div className="flex justify-between items-center my-5">
-            <h1>Others</h1>
+            <h1>Systems</h1>
             <button
               className="btn btn--acent btn--sm"
-              onClick={handleAddOthers}
+              onClick={handleAddSystems}
             >
               Add
             </button>
           </div>
-          <OthersTable />
+          <SystemsTable />
         </main>
       </section>
-      {isShow && <ModalAddOthers setIsShow={setIsShow} />}
+      {isShow && <ModalAddSystems setIsShow={setIsShow} />}
     </>
   );
 };
 
-export default Others;
+export default Systems;

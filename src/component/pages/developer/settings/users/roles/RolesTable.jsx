@@ -12,6 +12,7 @@ import Footer from "../../../../../partials/Footer.jsx";
 import Nodata from "../../../../../partials/Nodata.jsx";
 import Loadmore from "../../../../../partials/Loadmore.jsx";
 import Searchbar from "../../../../../partials/Searchbar.jsx";
+import ServerError from "../../../../../partials/ServerError.jsx";
 const RolesTable = ({ setIsShow, setItemEdit }) => {
   const [isLoading, setIsLoading] = React.useState(false);
   const [isArchive, setIsArchive] = React.useState(false);
@@ -84,6 +85,11 @@ const RolesTable = ({ setIsShow, setItemEdit }) => {
                       </td>
                     </tr>
                   ))}
+                <tr className="text-center">
+                  <td colSpan="100%" className="p-10">
+                    <ServerError />
+                  </td>
+                </tr>
                 {roles.map((item, key) => (
                   <tr key={key}>
                     <td>{item.id}</td>

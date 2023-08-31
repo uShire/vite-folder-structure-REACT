@@ -9,7 +9,7 @@ import ModalError from "../../../../../partials/modals/ModalError";
 
 const Roles = () => {
   const [isShow, setIsShow] = React.useState(false);
-  const [isError, setIsError] = React.useState(true);
+  const [isError, setIsError] = React.useState(false);
   const [itemEdit, setItemEdit] = React.useState([]);
   const [isSuccess, setSuccess] = React.useState(false);
   const handleAddRoles = () => setIsShow(true);

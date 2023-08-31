@@ -6,11 +6,13 @@ import { MdMarkEmailRead } from "react-icons/md";
 import Logo from "../../../svg/Logo";
 import { Link } from "react-router-dom";
 import SpinnerButton from "../../../partials/spinners/SpinnerButton";
+import SpinnerWindow from "../../../partials/spinners/SpinnerWindow";
 
 const SystemCreatePassword = () => {
-  const [isPasswordShow, setIsPasswordShow] = React.useState();
-  const [isConfirmPasswordShow, setIsConfirmPasswordShow] = React.useState();
-
+  const [isPasswordShow, setIsPasswordShow] = React.useState(false);
+  const [isConfirmPasswordShow, setIsConfirmPasswordShow] =
+    React.useState(false);
+  const [isLoadingSpinner, setLoadingSpinner] = React.useState(false);
   const [isLoading, setIsLoading] = React.useState(false);
   const [isSuccess, setIsSuccess] = React.useState(false);
 
@@ -27,9 +29,18 @@ const SystemCreatePassword = () => {
   const handleShowPassword = () => setIsPasswordShow(!isPasswordShow);
   const handleConfirmShowPassword = () =>
     setIsConfirmPasswordShow(!isConfirmPasswordShow);
-
+  React.useEffect(() => {
+    function spinnerOn() {
+      setLoadingSpinner(true);
+      setTimeout(() => {
+        setLoadingSpinner(false);
+      }, 2000);
+    }
+    spinnerOn();
+  }, []);
   return (
     <>
+      {isLoadingSpinner && <SpinnerWindow />}
       <div className="h-screen w-full flex justify-center items-center">
         <div className="login w-full max-w-[380px] border border-gray-200 py-8 px-4 rounded-md shadow-sm">
           {/* <div className="flex flex-col items-center mb-4"> */}

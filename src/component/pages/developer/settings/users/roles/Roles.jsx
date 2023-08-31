@@ -4,11 +4,16 @@ import Breadcrumbs from "../../../../../partials/Breadcrumbs";
 import Navigation from "../../../../../partials/Navigation";
 import RolesTable from "./RolesTable";
 import ModalAddRoles from "./ModalAddRoles";
+import Toast from "../../../../../partials/Toast";
+import ModalError from "../../../../../partials/modals/ModalError";
 
 const Roles = () => {
   const [isShow, setIsShow] = React.useState(false);
+  const [isError, setIsError] = React.useState(true);
   const [itemEdit, setItemEdit] = React.useState([]);
+  const [isSuccess, setSuccess] = React.useState(false);
   const handleAddRoles = () => setIsShow(true);
+
   return (
     <>
       <Header />
@@ -32,8 +37,11 @@ const Roles = () => {
           setIsShow={setIsShow}
           itemEdit={itemEdit}
           setItemEdit={setItemEdit}
+          setSuccess={setSuccess}
         />
       )}
+      {isSuccess && <Toast setSuccess={setSuccess} />}
+      {isError && <ModalError setIsError={setIsError} />}
     </>
   );
 };

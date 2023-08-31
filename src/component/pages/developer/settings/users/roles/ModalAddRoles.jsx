@@ -3,9 +3,14 @@ import { FaTimes } from "react-icons/fa";
 import SpinnerButton from "../../../../../partials/spinners/SpinnerButton";
 import Modal from "../../../../../partials/structure/modal";
 
-const ModalAddRoles = ({ setIsShow, itemEdit, setItemEdit }) => {
+const ModalAddRoles = ({ setIsShow, itemEdit, setItemEdit, setSuccess }) => {
   const handleClose = () => {
     setItemEdit([]);
+    setIsShow(false);
+  };
+
+  const handleAdd = () => {
+    setSuccess(true);
     setIsShow(false);
   };
   return (
@@ -36,7 +41,7 @@ const ModalAddRoles = ({ setIsShow, itemEdit, setItemEdit }) => {
           </div>
         </div>
         <div className="modal__action flex justify-end gap-1">
-          <button className="btn btn--accent ">
+          <button className="btn btn--accent" onClick={handleAdd}>
             {itemEdit.length === 0 ? "Add" : "Save"} <SpinnerButton />
           </button>
           <button className="btn btn--cancel" onClick={handleClose}>
